@@ -1,0 +1,205 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(https://www.wallpapertip.com/wmimgs/66-666816_hd-web-background.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: "Courgette", cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+}
+/* Big container */
+.container {
+  height: 250px;
+  width: 70%;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: auto;
+}
+
+#newNote {
+  border-radius: 10px;
+  width: 320px;
+  height: 50px;
+  overflow: auto;
+  border: 1px solid white;
+}
+
+#newNote:focus {
+  outline: none;
+}
+
+.notes {
+  width: 40%;
+  border-radius: 10px;
+  height: 30px;
+  background-color: black;
+}
+
+.close {
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
+  float: right;
+  background-color: rgb(255, 251, 0);
+  transition: 500ms;
+  color: black;
+}
+
+.close:hover {
+  background-color: rgb(238, 48, 0);
+  outline: none;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.divText {
+  font-size: 19px;
+  text-align: center;
+  position: relative;
+  top: -16px;
+  width: 55%;
+  height: 24px;
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin-left: 15px;
+  color: white;
+}
+
+.btn {
+  font-family: "Courgette", cursive;
+  border: none;
+}
+
+.create {
+  margin-top: 15px;
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
+  float: right;
+  background-color: springgreen;
+  transition: 500ms;
+  color: black;
+}
+
+.create:hover {
+  outline: none;
+  background-color: rgb(42, 209, 125);
+  cursor: pointer;
+}
+.create:focus {
+  outline: none;
+}
+
+/* Modal button see more*/
+
+.modalBtn {
+  font-family: "Courgette", cursive;
+  border: none;
+  margin-top: 15px;
+  border-radius: 10px;
+  width: 60px;
+  height: 30px;
+  float: right;
+  background-color: springgreen;
+  transition: 500ms;
+  color: black;
+  position: relative;
+  top: -15px;
+  right: 10px;
+}
+
+.modalBtn:focus {
+  outline: none;
+}
+
+.modalBtn:hover {
+  outline: none;
+  background-color: rgb(6, 196, 101);
+  cursor: pointer;
+}
+
+/* The Modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  border-radius: 10px;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  width: 40%;
+  height: 150px;
+  position: relative;
+  color: black;
+  top: 25%;
+}
+
+/* The Close Button button */
+.closeModal:hover,
+.closeModal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(240, 76, 0);
+}
+.closeModal {
+  border-radius: 10px;
+  width: 60px;
+  height: 25px;
+  float: right;
+  background-color: rgb(255, 251, 0);
+  transition: 500ms;
+  color: black;
+  text-align: center;
+  font-weight: 15px;
+  padding-top: 5px;
+}
+
+/* Modal text */
+.modalText {
+  position: relative;
+  top: -15px;
+  width: 85%;
+  height: 155px;
+  color: rgb(10, 167, 93);
+  font-size: 20px;
+}
+
+/* Media queries */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .notes {
+    width: 90%;
+    border-radius: 10px;
+    height: 30px;
+  }
+}
